@@ -11,5 +11,6 @@ public class J01026 {
             int sq = (int)Math.sqrt(n);
             System.out.println(sq * sq == n ? "YES" : "NO");
         }
+        buf.close();
     }
 }

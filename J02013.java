@@ -10,7 +10,7 @@
 import java.util.Scanner;
 
 public class J02013 {
-    
+
     static void bubleSort(int[] a, int n) {
         for (int i = 0; i < n; ++i) {
             boolean ok = true;
@@ -22,8 +22,9 @@ public class J02013 {
                     a[j - 1] = tmp;
                 }
             }
-            
-            if (ok) break;
+
+            if (ok)
+                break;
             else {
                 System.out.print("Buoc " + (i + 1) + ":");
                 for (int j = 0; j < n; ++j)
@@ -32,15 +33,16 @@ public class J02013 {
             }
         }
     }
-    
+
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
-        
+
         int n = buf.nextInt();
         int[] a = new int[n];
         for (int i = 0; i < n; ++i)
             a[i] = buf.nextInt();
-        
+
         bubleSort(a, n);
+        buf.close();
     }
 }

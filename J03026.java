@@ -25,5 +25,6 @@ public class J03026 {
                 System.out.println(Math.max(a.length(), b.length()));
             }
         }
+        buf.close();
     }
 }

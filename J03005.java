@@ -10,19 +10,20 @@
 import java.util.StringTokenizer;
 import java.util.StringJoiner;
 import java.util.Scanner;
+
 public class J03005 {
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
         int t = buf.nextInt();
         buf.nextLine();
-        
+
         while (t-- > 0) {
             StringTokenizer st = new StringTokenizer(buf.nextLine());
             String firstName = st.nextToken().toUpperCase();
 
             StringJoiner sj = new StringJoiner(" ", "", ", ");
             sj.setEmptyValue("");
-            
+
             while (st.hasMoreTokens()) {
                 String word = st.nextToken();
                 String w = Character.toUpperCase(word.charAt(0)) + word.substring(1).toLowerCase();
@@ -30,5 +31,6 @@ public class J03005 {
             }
             System.out.println(sj + firstName);
         }
-    }   
+        buf.close();
+    }
 }

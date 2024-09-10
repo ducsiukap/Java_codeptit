@@ -10,17 +10,18 @@
 import java.util.Scanner;
 
 public class J04003 {
-    
+
     static long gcd(long a, long b) {
         if (a == 0)
             return b;
         while (b != 0) {
-            long c = a; 
+            long c = a;
             a = b;
             b = c % b;
         }
         return a;
     }
+
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
         long dcm, lmm;
@@ -28,5 +29,6 @@ public class J04003 {
         lmm = buf.nextLong();
         long __gcd = gcd(dcm, lmm);
         System.out.println((dcm / __gcd) + "/" + (lmm / __gcd));
+        buf.close();
     }
 }

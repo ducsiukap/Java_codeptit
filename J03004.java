@@ -1,4 +1,3 @@
-import java.util.Locale;
 import java.util.StringTokenizer;
 import java.util.Scanner;
 
@@ -9,6 +8,7 @@ public class J03004 {
             System.out.print(s[i]);
         System.out.print(" ");
     }
+
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
 
@@ -22,5 +22,6 @@ public class J03004 {
             }
             System.out.println();
         }
+        buf.close();
     }
 }

@@ -20,12 +20,12 @@ public class J03032 {
             String s = buf.nextLine();
             String[] A = s.split("\\s+");
             for (String w : A) {
-                for (int i = w.length() - 1; i >= 0; --i) 
+                for (int i = w.length() - 1; i >= 0; --i)
                     System.out.print(w.charAt(i));
                 System.out.print(" ");
             }
             System.out.println();
         }
+        buf.close();
     }
 }
-

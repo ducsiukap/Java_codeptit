@@ -32,7 +32,7 @@ public class J03009 {
         }
         String[] result = new String[countWord];
         int i = 0;
-        for (String item : word) 
+        for (String item : word)
             if (item != null) {
                 result[i] = item;
                 ++i;
@@ -40,6 +40,7 @@ public class J03009 {
         Arrays.sort(result);
         return result;
     }
+
     static void method(String a, String b) {
         String[] s1 = buildListWord(a);
         String[] s2 = buildListWord(b);
@@ -54,24 +55,22 @@ public class J03009 {
                 if (comp == 0) {
                     ++i;
                     ++j;
-                }
-                else if (comp < 0) {
+                } else if (comp < 0) {
                     System.out.print(s1[i] + " ");
                     ++i;
-                }
-                else
+                } else
                     ++j;
-            }
-            else {
+            } else {
                 System.out.print(s1[i] + " ");
                 ++i;
             }
         }
         System.out.println();
     }
+
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
-        
+
         int t = buf.nextInt();
         buf.nextLine();
         while (t-- > 0) {
@@ -80,5 +79,6 @@ public class J03009 {
             b = buf.nextLine();
             method(a, b);
         }
+        buf.close();
     }
 }

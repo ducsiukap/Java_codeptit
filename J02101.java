@@ -3,9 +3,12 @@ import java.util.Scanner;
 public class J02101 {
     static void printMatrix(int[] a, int n) {
         for (int i = 0; i < n; ++i) {
-            for (int j = 0; j < n; ++j) System.out.print(a[i * n + j] + " ");
+            for (int j = 0; j < n; ++j)
+                System.out.print(a[i * n + j] + " ");
             ++i;
-            if (i < n) for (int j = n - 1; j >= 0; --j) System.out.print(a[i * n + j] + " ");
+            if (i < n)
+                for (int j = n - 1; j >= 0; --j)
+                    System.out.print(a[i * n + j] + " ");
         }
     }
 
@@ -21,5 +24,6 @@ public class J02101 {
             printMatrix(arr, n);
             System.out.println();
         }
+        in.close();
     }
 }

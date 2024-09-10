@@ -11,7 +11,8 @@ import java.util.Scanner;
 
 public class J02008 {
     static long[] lcm = new long[101];
-    static long gcd(long a, long b){
+
+    static long gcd(long a, long b) {
         while (b != 0) {
             long c = a;
             a = b;
@@ -19,7 +20,7 @@ public class J02008 {
         }
         return a;
     }
-    
+
     static long getLcmOfN(int n) {
         if (n <= 2)
             return lcm[n] = n;
@@ -27,16 +28,17 @@ public class J02008 {
             return lcm[n] = n * getLcmOfN(n - 1) / gcd(n, getLcmOfN(n - 1));
         return lcm[n];
     }
-    
+
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
-        
+
         int t = buf.nextInt();
         while (t > 0) {
             --t;
             int n = buf.nextInt();
             System.out.println(getLcmOfN(n));
         }
+        buf.close();
     }
-    
+
 }

@@ -28,5 +28,6 @@ public class J02005 {
             if (a[i] && b[i])
                 System.out.print(i + " ");
         System.out.println();
+        buf.close();
     }
 }

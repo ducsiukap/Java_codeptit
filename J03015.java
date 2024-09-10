@@ -72,7 +72,7 @@ public class J03015 {
 
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
-        int t = 1; //buf.nextInt();
+        int t = 1; // buf.nextInt();
         while (t-- > 0) {
             String a, b;
             a = buf.next();
@@ -88,5 +88,6 @@ public class J03015 {
                 absoluteMinus(b, a, true);
             }
         }
+        buf.close();
     }
 }

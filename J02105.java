@@ -12,9 +12,11 @@ public class J02105 {
         for (int i = 0; i < n; ++i) {
             System.out.printf("List(%d) =", i + 1);
             for (int j = 0; j < n; ++j)
-                if (a[i][j] == 1) System.out.print(" " + (j + 1));
+                if (a[i][j] == 1)
+                    System.out.print(" " + (j + 1));
             System.out.println();
         }
 
+        buf.close();
     }
 }

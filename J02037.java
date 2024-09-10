@@ -7,14 +7,12 @@ public class J02037 {
 
         int T = buf.nextInt();
         buf.nextLine();
-        while (T > 0)
-        {
+        while (T > 0) {
             --T;
             int cnt, odd;
             cnt = odd = 0;
             StringTokenizer s = new StringTokenizer(buf.nextLine());
-            while (s.hasMoreTokens())
-            {
+            while (s.hasMoreTokens()) {
                 int num = Integer.parseInt(s.nextToken());
                 odd += (num & 1);
                 ++cnt;
@@ -24,5 +22,6 @@ public class J02037 {
             else
                 System.out.println(odd < (cnt - odd) ? "YES" : "NO");
         }
+        buf.close();
     }
 }

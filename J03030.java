@@ -19,10 +19,11 @@ public class J03030 {
                 }
             }
             --n;
-//            System.out.println(len);
+            // System.out.println(len);
         }
         if (len > 0)
             ++ans;
         System.out.println(ans);
+        buf.close();
     }
 }

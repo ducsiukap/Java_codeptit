@@ -26,15 +26,16 @@ public class J02010 {
             System.out.println();
         }
     }
-    
+
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
-        
+
         int n = buf.nextInt();
         int[] a = new int[n];
         for (int i = 0; i < n; ++i)
             a[i] = buf.nextInt();
-        
+
         directlySort(a, n);
+        buf.close();
     }
 }

@@ -1,7 +1,7 @@
 import java.util.Scanner;
-import java.util.StringTokenizer;
+
 public class J01025 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
 
         int[][] a = new int[2][4];
@@ -14,6 +14,6 @@ public class J01025 {
 
         int e = Math.max(x, y);
         System.out.println(e * e);
+        buf.close();
     }
 }
-

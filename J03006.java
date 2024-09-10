@@ -20,13 +20,14 @@ public class J03006 {
         }
         return true;
     }
-    
+
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
         int t = buf.nextInt();
         while (t-- > 0) {
             String num = buf.next();
-            System.out.println((perfectNumber(num) ? "YES":"NO"));
+            System.out.println((perfectNumber(num) ? "YES" : "NO"));
         }
+        buf.close();
     }
 }

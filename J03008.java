@@ -12,7 +12,6 @@ import java.util.Scanner;
 public class J03008 {
     static boolean isPerfectNumber(String num) {
         int i = 0, j = num.length() - 1;
-        int totalSum = 0;
         while (i <= j) {
             char c = num.charAt(i);
             if (c != num.charAt(j))
@@ -24,13 +23,14 @@ public class J03008 {
         }
         return true;
     }
-    
+
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
         int t = buf.nextInt();
         while (t-- > 0) {
             String num = buf.next();
-            System.out.println(isPerfectNumber(num) ? "YES":"NO");
+            System.out.println(isPerfectNumber(num) ? "YES" : "NO");
         }
+        buf.close();
     }
 }

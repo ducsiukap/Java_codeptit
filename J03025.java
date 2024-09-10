@@ -21,14 +21,15 @@ public class J03025 {
         }
         return (diff == 1 || (diff == 0 && (s.length() & 1) == 1));
     }
-    
+
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
-        
+
         int t = buf.nextInt();
         while (t-- > 0) {
             String s = buf.next();
             System.out.println(check(s) ? "YES" : "NO");
         }
+        buf.close();
     }
 }

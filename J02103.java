@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class J02103 {
     static void matrixMultiply(int[][] m1, int[][] m2, int n, int m) {
         for (int i = 0; i < n; ++i) {
@@ -28,5 +29,6 @@ public class J02103 {
             System.out.println("Test " + k + ":");
             matrixMultiply(matrix, transform, n, m);
         }
+        buf.close();
     }
 }

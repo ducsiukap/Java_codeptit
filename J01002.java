@@ -15,5 +15,6 @@ public class J01002 {
             System.out.println(N * (N + 1) / 2);
             --T;
         }
+        buff.close();
     }
 }

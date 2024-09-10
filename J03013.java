@@ -8,6 +8,7 @@
  * @author ducpv
  */
 import java.util.Scanner;
+
 public class J03013 {
     static void absoluteMinus(String x, String y) {
         int i = x.length() - 1, j = y.length() - 1;
@@ -22,28 +23,30 @@ public class J03013 {
             if (M < 0) {
                 M += 10;
                 carry = 1;
-            }
-            else carry = 0;
+            } else
+                carry = 0;
             ++k;
             m[k] = M;
         }
         while (i >= 0) {
             int M = x.charAt(i) - '0' - carry;
             --i;
-            if (M < 0) M += 10;
-            else carry = 0;
+            if (M < 0)
+                M += 10;
+            else
+                carry = 0;
             ++k;
             m[k] = M;
         }
-        
-//        while (m[k] == 0) --k;
+
+        // while (m[k] == 0) --k;
         while (k >= 0) {
             System.out.print(m[k]);
             --k;
         }
         System.out.println();
     }
-    
+
     static int numberCompare(String s1, String s2) {
         int n = s1.length(), m = s2.length();
         if (n == m) {
@@ -57,6 +60,7 @@ public class J03013 {
         }
         return (n > m ? 1 : -1);
     }
+
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
         int t = buf.nextInt();
@@ -66,12 +70,14 @@ public class J03013 {
             b = buf.next();
             int comp = numberCompare(a, b);
             if (comp == 0) {
-                for (int i = 0; i < a.length(); ++i) System.out.print(0);
+                for (int i = 0; i < a.length(); ++i)
+                    System.out.print(0);
                 System.out.println();
-            }
-            else if (comp == 1) 
+            } else if (comp == 1)
                 absoluteMinus(a, b);
-            else absoluteMinus(b, a);
+            else
+                absoluteMinus(b, a);
         }
+        buf.close();
     }
 }

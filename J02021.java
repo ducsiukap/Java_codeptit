@@ -11,30 +11,32 @@
 import java.util.Scanner;
 
 public class J02021 {
-    
+
     static int cnt;
-    
+
     static void Try(int[] X, int i, int n, int k) {
         for (int j = X[i - 1] + 1; j <= n - k + i; ++j) {
             X[i] = j;
             if (i == k) {
                 ++cnt;
-                for (int t = 1; t <= k; ++t) System.out.print(X[t]);
+                for (int t = 1; t <= k; ++t)
+                    System.out.print(X[t]);
                 System.out.print(" ");
-            }
-            else Try(X, i + 1, n, k);
+            } else
+                Try(X, i + 1, n, k);
         }
     }
-    
+
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
         int n, k;
         n = Integer.parseInt(buf.next());
         k = Integer.parseInt(buf.next());
-        
+
         int[] X = new int[k + 1];
         cnt = X[0] = 0;
         Try(X, 1, n, k);
         System.out.printf("\nTong cong co %d to hop\n", cnt);
+        buf.close();
     }
 }

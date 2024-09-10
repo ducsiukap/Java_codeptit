@@ -28,5 +28,6 @@ public class J02007 {
                 System.out.println(x + " xuat hien " + f[x] + " lan");
             }
         }
+        buf.close();
     }
 }

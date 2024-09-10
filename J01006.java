@@ -1,9 +1,9 @@
 import java.util.Scanner;
+
 public class J01006 {
     static long[] a = new long[93];
 
-    public static long getFib(int n)
-    {
+    public static long getFib(int n) {
         if (n < 3)
             return a[n] = 1;
         if (a[n] == 0)
@@ -21,5 +21,6 @@ public class J01006 {
             System.out.println(getFib(n));
             --T;
         }
+        buf.close();
     }
 }

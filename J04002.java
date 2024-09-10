@@ -7,7 +7,6 @@
  *
  * @author ducpv
  */
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class J04002 {
@@ -15,6 +14,7 @@ public class J04002 {
         s[0] = Character.toUpperCase(s[0]);
         return new String(s);
     }
+
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
         long w, h;
@@ -22,13 +22,14 @@ public class J04002 {
         w = Long.parseLong(buf.next());
         h = Long.parseLong(buf.next());
         color = buf.next();
-        if (w <= 0 || h <= 0) 
+        if (w <= 0 || h <= 0)
             System.out.println("INVALID");
         else {
-            color= color.toLowerCase();
+            color = color.toLowerCase();
             color = fixString(color.toCharArray());
             System.out.print(2 * (w + h));
             System.out.println(" " + (w * h) + " " + color);
         }
+        buf.close();
     }
 }

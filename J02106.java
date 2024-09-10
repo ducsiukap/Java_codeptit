@@ -14,8 +14,10 @@ public class J02106 {
             int tmp = 0;
             for (int j = 0; j < 3; ++j)
                 tmp += a[i][j];
-            if (tmp > 1) ++ans;
+            if (tmp > 1)
+                ++ans;
         }
         System.out.println(ans);
+        buf.close();
     }
 }

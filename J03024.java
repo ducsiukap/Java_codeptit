@@ -39,5 +39,6 @@ public class J03024 {
             String number = buf.next();
             System.out.println(check(number));
         }
+        buf.close();
     }
 }

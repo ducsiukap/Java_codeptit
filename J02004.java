@@ -18,5 +18,6 @@ public class J02004 {
                 a[i] = buf.nextInt();
             System.out.println(check(a, n));
         }
+        buf.close();
     }
 }

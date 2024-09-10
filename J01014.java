@@ -35,5 +35,6 @@ public class J01014 {
             }
             System.out.println(Math.max(n, ans));
         }
+        buf.close();
     }
 }

@@ -11,5 +11,6 @@ public class HINHCHUNHAT {
             System.out.println(0);
         else
             System.out.println((2 * (a + b)) + " " + (a * b));
+        buf.close();
     }
 }

@@ -19,20 +19,22 @@ public class J03007 {
             if (num.charAt(i) != num.charAt(j))
                 return false;
             int digit = num.charAt(i) - '0';
-            if (i != j) digit <<= 1;
+            if (i != j)
+                digit <<= 1;
             totalSum += digit;
             ++i;
             --j;
         }
         return totalSum % 10 == 0;
     }
-    
+
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
         int t = buf.nextInt();
         while (t-- > 0) {
             String num = buf.next();
-            System.out.println(isPerfectNumber(num) ? "YES":"NO");
+            System.out.println(isPerfectNumber(num) ? "YES" : "NO");
         }
+        buf.close();
     }
 }

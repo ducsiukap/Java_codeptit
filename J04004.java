@@ -11,7 +11,8 @@ import java.util.Scanner;
 
 public class J04004 {
     static long __gcd(long a, long b) {
-        if (a == 0) return b;
+        if (a == 0)
+            return b;
         while (b != 0) {
             long c = a;
             a = b;
@@ -19,9 +20,11 @@ public class J04004 {
         }
         return a;
     }
-    
-    static long __lcm(long a, long b) { return a * b / __gcd(a, b); };
-    
+
+    static long __lcm(long a, long b) {
+        return a * b / __gcd(a, b);
+    };
+
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
         int t1, t2, m1, m2;
@@ -31,8 +34,9 @@ public class J04004 {
         m2 = buf.nextInt();
         long M = __lcm(m1, m2);
         long T = M / m1 * t1 + M / m2 * t2;
-        
+
         long gcd = __gcd(T, M);
         System.out.println((T / gcd) + "/" + (M / gcd));
+        buf.close();
     }
 }
