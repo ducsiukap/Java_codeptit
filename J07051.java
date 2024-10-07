@@ -6,14 +6,14 @@ import java.text.SimpleDateFormat;
 import java.text.ParseException;
 import java.util.Arrays;
 
-class customer implements Comparable<customer> {
+class customerJ07051 implements Comparable<customerJ07051> {
     private String id, name, room;
     private int totalCost, serviceFee, roomFee, days;
     private Date in, out;
 
     static int tt = 1;
 
-    public customer(String name, String room, Date in, Date out, int serviceFee) {
+    public customerJ07051(String name, String room, Date in, Date out, int serviceFee) {
         this.id = String.format("KH%02d", tt);
         ++tt;
         this.name = name; 
@@ -60,7 +60,7 @@ class customer implements Comparable<customer> {
     }
 
     @Override
-    public int compareTo(customer other) { return other.totalCost - totalCost; }
+    public int compareTo(customerJ07051 other) { return other.totalCost - totalCost; }
 
 }
 
@@ -70,17 +70,17 @@ public class J07051 {
         try {
             Scanner sc = new Scanner(new File("KHACHHANG.in"));
             int numberOfCostumer = sc.nextInt();
-            customer list[] = new customer[numberOfCostumer];
+            customerJ07051 list[] = new customerJ07051[numberOfCostumer];
             
             for (int i = 0; i < numberOfCostumer; ++i) {
                 sc.nextLine();
                 try {
-                list[i] = new customer(sc.nextLine(), sc.next(), d.parse(sc.next()), d.parse(sc.next()), sc.nextInt());
+                list[i] = new customerJ07051(sc.nextLine(), sc.next(), d.parse(sc.next()), d.parse(sc.next()), sc.nextInt());
                 } catch (ParseException e) {}
             }
 
             Arrays.sort(list);
-            for (customer Cus : list)
+            for (customerJ07051 Cus : list)
                 System.out.println(Cus);
             sc.close();
         } catch (FileNotFoundException e) {};
