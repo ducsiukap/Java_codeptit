@@ -19,11 +19,11 @@ class PointJ04019 {
     }
 }
 
-class Triangle {
+class TriangleJ04019 {
     private PointJ04019 p1, p2, p3;
     private double e1, e2, e3;
 
-    public Triangle(PointJ04019 p1, PointJ04019 p2, PointJ04019 p3) {
+    public TriangleJ04019(PointJ04019 p1, PointJ04019 p2, PointJ04019 p3) {
         this.p1 = p1;
         this.p2 = p2;
         this.p3 = p3;
@@ -57,7 +57,7 @@ public class J04019 {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         while (t-- > 0) {
-            Triangle a = new Triangle(PointJ04019.nextPointJ04019(sc), PointJ04019.nextPointJ04019(sc), PointJ04019.nextPointJ04019(sc));
+            TriangleJ04019 a = new TriangleJ04019(PointJ04019.nextPointJ04019(sc), PointJ04019.nextPointJ04019(sc), PointJ04019.nextPointJ04019(sc));
             if (!a.valid()) {
                 System.out.println("INVALID");
             } else {

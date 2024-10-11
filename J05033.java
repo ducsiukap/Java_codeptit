@@ -2,11 +2,11 @@ import java.util.Scanner;
 import java.util.Comparator;
 import java.util.Arrays;
 
-class Time {
+class TimeJ05033 {
     private int hour, minute, second;
     private long totalSecond;
 
-    public Time(int hour, int minute, int second) {
+    public TimeJ05033(int hour, int minute, int second) {
         this.hour = hour;
         this.minute = minute;
         this.second = second;
@@ -21,9 +21,9 @@ class Time {
     public String toString() { return (hour + " " + minute + " " + second); }
 }
 
-class TimeComparator implements Comparator<Time> {
+class TimeJ05033Comparator implements Comparator<TimeJ05033> {
     @Override
-    public int compare(Time t1, Time t2) { 
+    public int compare(TimeJ05033 t1, TimeJ05033 t2) {
         return Long.compare(t1.getTotalSecond(), t2.getTotalSecond()); 
     }
 }
@@ -33,12 +33,12 @@ public class J05033 {
         Scanner buf = new Scanner(System.in);
         int n = buf.nextInt();
 
-        Time[] t = new Time[n];
+        TimeJ05033[] t = new TimeJ05033[n];
         for (int i = 0; i < n; ++i)
-            t[i] = new Time(buf.nextInt(), buf.nextInt(), buf.nextInt());
+            t[i] = new TimeJ05033(buf.nextInt(), buf.nextInt(), buf.nextInt());
         buf.close();
 
-        Arrays.sort(t, new TimeComparator());
-        for (Time time : t) System.out.println(time.toString());
+        Arrays.sort(t, new TimeJ05033Comparator());
+        for (TimeJ05033 time : t) System.out.println(time.toString());
     }
 }

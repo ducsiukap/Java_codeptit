@@ -29,16 +29,16 @@ class Point1 {
     }
 }
 
-class Triangle {
+class TriangleJ04008 {
     private double e1, e2, e3;
 
-    public Triangle(double e1, double e2, double e3) {
+    public TriangleJ04008(double e1, double e2, double e3) {
         this.e1 = e1;
         this.e2 = e2;
         this.e3 = e3;
     }
 
-    public boolean isTriangle() {
+    public boolean isTriangleJ04008() {
         if (e1 == 0 || e2 == 0 || e3 == 0) 
             return false;
         if (e1 + e2 <= e3 || e1 + e3 <= e2 || e2 + e3 <= e1) 
@@ -51,7 +51,7 @@ class Triangle {
     public double perimeter() { return (e1 + e2 + e3); }
 
     @Override public String toString() {
-        if (isTriangle())
+        if (isTriangleJ04008())
             return String.format("%.3f", perimeter());
         return "INVALID";
     }
@@ -69,7 +69,7 @@ public class J04008 {
                 p[i].setY(buf.nextDouble());
             }
 
-            Triangle T = new Triangle(p[0].distance(p[1]), p[1].distance(p[2]), p[2].distance(p[0]));
+            TriangleJ04008 T = new TriangleJ04008(p[0].distance(p[1]), p[1].distance(p[2]), p[2].distance(p[0]));
             System.out.println(T.toString());
         }
         buf.close();

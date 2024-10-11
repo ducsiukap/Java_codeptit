@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-class Student {
+class StudentJ04006 {
     private String sID, sName, sClass, sDoB;
     private float sGPA;
 
-    public Student() {
+    public StudentJ04006() {
         this.sID = "B20DCCN001";
         this.sName = this.sClass = this.sDoB;
         this.sGPA = 0;
@@ -37,7 +37,7 @@ class Student {
 public class J04006 {
     public static void main(String[] args) {
         Scanner buf = new Scanner(System.in);
-        Student a = new Student();
+        StudentJ04006 a = new StudentJ04006();
         a.setName(buf.nextLine());
         a.setClass(buf.nextLine());
         a.setDoB(buf.nextLine());
